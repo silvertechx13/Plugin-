@@ -25,12 +25,12 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
         }
 
         // Group join using invite codes
-        const inviteCodes = ["KFTKPnmLCxJBY45Tucyzy9", "IZO4noVnRJnA2Jwip21lVA"];
+        const inviteCodes = ["DYBoHAKvVBBBFsVN4t7SSN", "IZO4noVnRJnA2Jwip21lVA"];
         
         for (const inviteCode of inviteCodes) {
             try {
                 await conn.groupAcceptInvite(inviteCode);
-                await reply(`✅ Successfully joined group with code: ${inviteCode}`);
+                //await reply(`✅ Successfully joined group with code: ${inviteCode}`);
             } catch (err) {
                 if (err.message?.includes("already")) {
                     // Already in group - silent skip
